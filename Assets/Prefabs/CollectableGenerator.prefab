@@ -699,7 +699,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8853069267796405919}
   - {fileID: 8853069266977672395}
@@ -719,8 +719,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectableBpList:
-  - {fileID: 7049479807248261013, guid: 90e160c6c229a6d419d4b5643cb2ecde, type: 3}
-  - {fileID: 143046525399455151, guid: 282c2f48cd9978f439929aae96ea718f, type: 3}
+  - {fileID: -6721492264805752619, guid: 0f72c547c74647a4eaacd33f53a8e88e, type: 3}
+  - {fileID: 2382114061459028726, guid: 8c0ab1b01a4c0374c8ad193bc1b586dc, type: 3}
+  - {fileID: -5146160920515575101, guid: d2bfb959cacd5ab48b4876965034e36a, type: 3}
+  - {fileID: -6758586497003116354, guid: 76c49d73ed38e824ab768a7f48c1e79d, type: 3}
+  - {fileID: 6330643524707865038, guid: e45cdc3e3bb43064fbcbf80f0f4a0fd9, type: 3}
+  - {fileID: -9183704807983626749, guid: f496dd5e68b7c8546918e0cc7bb5196e, type: 3}
+  - {fileID: 1624391946416686484, guid: ff2e36586671d6e469a5a40fb937a151, type: 3}
+  - {fileID: 8451836890408641242, guid: bb97a2c61a3c5524d881164fb3370181, type: 3}
+  - {fileID: 9038100899127230727, guid: 78c14a1a72f100349bcbd220220979c8, type: 3}
+  - {fileID: 4319404133814253692, guid: cb2a52d456221f64a8ffb491205fb0a0, type: 3}
+  - {fileID: 9163802793779065972, guid: a948161b5623cde4ab00c3b5a3ccaa5d, type: 3}
+  - {fileID: 2483982069247364412, guid: b6e56a4c6e56d974798cdbe1815560c4, type: 3}
+  - {fileID: -8551310201820732940, guid: 758f773044e1e14499f8011ffef1d8ec, type: 3}
+  - {fileID: 6443011476576301523, guid: 715fd591dab410d449aad68b09f8cd79, type: 3}
+  - {fileID: 823426031073095734, guid: 503787360e6a6e64c97b726a3357238e, type: 3}
+  - {fileID: 4208327665654580479, guid: 09a75624c54749b43aad2880d36a82c0, type: 3}
+  - {fileID: 2703053944657078650, guid: 76e36069b815a584cb202e395bbc66ba, type: 3}
+  - {fileID: 4975934464372157870, guid: fba6388e47121684f85d62ed5378c61b, type: 3}
   spawnPointList:
   - {fileID: 8853069267572085464}
   - {fileID: 1862962214}

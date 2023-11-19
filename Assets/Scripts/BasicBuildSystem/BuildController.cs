@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.VFX;
 
 namespace BasicBuildSystem
 {
@@ -12,6 +13,8 @@ namespace BasicBuildSystem
         [SerializeField] private Transform spawnParent;
         [SerializeField] private List<ParticleSystem> particleList;
         [SerializeField] private float particleSpeedPerLevel = -25f;
+        [SerializeField] private VisualEffect smokeVfx;
+        
         
         
         
@@ -21,6 +24,9 @@ namespace BasicBuildSystem
         private int _buildLevelIndex;
         private Dictionary<BuildObject, Transform> _objToParentDict = new Dictionary<BuildObject, Transform>();
 
+        private float _defaultSpeed1;
+        private float _defaultSpeed2;
+
         private void Awake()
         {
             foreach (var system in particleList)
@@ -28,6 +34,11 @@ namespace BasicBuildSystem
                 var emission = system.emission;
                 emission.rateOverTime = 500f;
             }
+
+            var speed1 = smokeVfx.GetVector3("Speed1");
+            _defaultSpeed1 = speed1.z;
+            var speed2 = smokeVfx.GetVector3("Speed2");
+            _defaultSpeed2 = speed2.z;
             
             BuildEvents.OnAddExp += OnAddExp;
             BuildEvents.OnChangeBuildLevel += OnChangeBuildLevel;
@@ -84,6 +95,13 @@ namespace BasicBuildSystem
                     rateCount = 10f;
                 emission.rateOverTime = rateCount;
             }
+            
+            var speed1 = smokeVfx.GetVector3("Speed1");//30
+            speed1.z = _defaultSpeed1 + ((30 - _defaultSpeed1) / buildLevelList.Count) * obj;
+            smokeVfx.SetVector3("Speed1", speed1);
+            var speed2 = smokeVfx.GetVector3("Speed2");//40
+            speed2.z = _defaultSpeed2 + ((40 - _defaultSpeed2) / buildLevelList.Count) * obj;
+            smokeVfx.SetVector3("Speed2", speed2);
         }
     }
 }

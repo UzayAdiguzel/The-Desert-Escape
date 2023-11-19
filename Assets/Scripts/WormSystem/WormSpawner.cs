@@ -28,7 +28,7 @@ namespace WormSystem
                 _counter = 0f;
                 _wormList.SyncList();
                 if (_wormList.CurrentList.Count > 100f) return;
-                var position = Random.insideUnitSphere * Random.Range(10f, range);
+                var position = Random.onUnitSphere * Random.Range(10f, range);
                 Instantiate(bp, transform.TransformPoint(position), Quaternion.identity,
                     ObjectParent.Instance.transform);
             }

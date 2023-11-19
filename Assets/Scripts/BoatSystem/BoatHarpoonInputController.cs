@@ -63,7 +63,11 @@ namespace BoatSystem
                 if (_hitPower > maxPower) _hitPower = maxPower;
                 var direction = (_firstPosition - _lastPosition).normalized;
                 if (direction != Vector3.zero)
+                {
                     harpoonRoot.localRotation = Quaternion.LookRotation(direction);
+                    lance.transform.localRotation = Quaternion.LookRotation(direction);
+                }
+
                 harpoonBack.localPosition =
                     Vector3.ClampMagnitude(harpoonRoot.InverseTransformPoint(hitInfo.point), 3f);
             }
